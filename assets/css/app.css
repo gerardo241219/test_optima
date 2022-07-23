@@ -1,0 +1,194 @@
+:root {
+    --bg: #3F3F46;
+    --bg-secondary: #94A3B8;
+    --bg-thead: #334155;
+    --bg-modify: #F59E0B;
+    --bg-delete: #B91C1C;
+    --bg-register: #15803D;
+    --color: #DBEAFE;
+    --font-primary: 'Dosis', sans-serif;
+}
+
+html {
+    font-family: var(--font-primary);
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.navbar {
+    background-color: var(--bg);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+    }
+}
+
+.navbar img {
+    width: 100px;
+}
+
+.navbar__items {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) { 
+    .nav__menu {
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+    } 
+
+    .navbar__items {
+        width: 7rem;
+    }
+}
+
+.navbar__items:hover {
+    background-color: var(--bg-secondary);
+    color: var(--bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 10vh auto 10vh auto;
+    padding: 5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.container__table {
+    overflow-x: scroll;
+}
+
+@media (min-width: 768px) { 
+    .container__table {
+        overflow-x: hidden;
+    }
+}
+
+.table {
+    width: 100%;
+}
+
+.table thead {
+    font-size: 1.5rem;
+}
+
+.table tbody {
+    font-size: 1.2rem;
+}
+
+.btn_table {
+    display: inline-block;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 0.2rem;
+    text-decoration: none;
+}
+
+.btn_modify {
+    background-color: var(--bg-modify);
+}
+
+.btn_delete {
+    background-color: var(--bg-delete);
+}
+
+.inputs {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.inputs input,
+select,
+button {
+    width: 100%;
+    padding: 1rem;
+}
+
+.inputs button {
+    background-color: var(--bg-register);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inputs button:hover {
+    background-color: #14532D;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.logo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.img-honda {
+    background-image: url('http://localhost/test/assets/images/honda.png');
+}
+
+.img-nissan {
+    background-image: url('http://localhost/test/assets/images/nissan.png');
+}
+
+.img-kia {
+    background-image: url('http://localhost/test/assets/images/kia.png');
+}
+
+.img-ford {
+    background-image: url('http://localhost/test/assets/images/ford.png');
+}
+
+.error {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
